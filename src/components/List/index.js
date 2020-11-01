@@ -4,7 +4,7 @@ import './styles.scss';
 
 const List = ({currencies}) => {
     const currenciesJSX = currencies.map((currencie) => {
-        return <li>{currencie.name}</li>
+        return <li><button>{currencie.name}</button></li>
     });
 
     return (
@@ -14,6 +14,7 @@ const List = ({currencies}) => {
     );
 };
 
+// Mise en place de proptypes pour le tableau d'objet.
 List.PropTypes = {
     currencies: PropTypes.arrayOf(
         PropTypes.shape({

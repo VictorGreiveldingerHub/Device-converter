@@ -1,3 +1,21 @@
 .list {
-    background-color: burlywood;
+    height: 150px;
+    overflow-y: scroll;
+    
+    & li {
+        height: 50px;
+
+        & button {
+            border: none;
+            width: -webkit-fill-available;
+            height: 50px;
+            border-bottom: solid 1px rgb(236, 234, 234);
+            
+        }
+
+        & button:hover {
+            background-color: #dbdbdb;
+            font-size: 16px;
+        }
+    }
 }

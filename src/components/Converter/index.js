@@ -1,21 +1,32 @@
 // == Import npm
-import React, { useState } from 'react';
+import React from 'react';
 
 // == Import
+import Form from 'src/components/Form';
+import List from 'src/components/List';
+import Result from 'src/components/Result';
 import './styles.scss';
 import currencies from 'src/data/currencies';
 
 
-const Converter = () => {
-  const [currencie, setCurrencies] = useState(currencies);
-  console.log(currencie);
+
+class Converter extends React.Component {
+  state={
+    currencies,
+  };
   
-  return (
-    <div id="todo">
-      Hello
-    </div>
-  );
+  render() {
+    console.log(currencies);
+    return (
+      <div id="todo">
+        <Form />
+        <List />
+        <Result />
+      </div>
+    );
+  };
 };
+
 
 // == Export
 export default Converter;

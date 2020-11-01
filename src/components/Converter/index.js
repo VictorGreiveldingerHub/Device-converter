@@ -20,7 +20,7 @@ class Converter extends React.Component {
     return (
       <div id="todo">
         <Form />
-        <List />
+        <List currencies={currencies} />
         <Result />
       </div>
     );

@@ -4,7 +4,10 @@ import './styles.scss';
 
 const Form = () => {
     return (
-        <div className="form">TODO: Form</div>
+        <div className="form">
+            <h1>Converter</h1>
+            <span className="amount"> 1 euro</span>
+        </div>
     );
 };
 

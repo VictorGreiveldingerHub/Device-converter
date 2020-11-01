@@ -4,7 +4,10 @@ import './styles.scss';
 
 const Result = () => {
     return (
-        <div className="result">TODO: Resultats</div>
+        <div className="result">
+            <span className="value">1.09</span>
+            <p className="description">United States Dollar</p>
+        </div>
     );
 };
 

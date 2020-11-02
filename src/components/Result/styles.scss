@@ -1,3 +1,16 @@
 .result {
-    background-color: orange;
+    background-color:  #EFEFEF;
+    color: rgb(202, 123, 50);
+    height: 125px;
+    padding: 2em;
+    text-align: center;
+
+    & .value {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    & .description {
+        font-size: 23px;
+    }
 }

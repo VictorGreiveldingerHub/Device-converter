@@ -2,9 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const List = ({currencies}) => {
-    const currenciesJSX = currencies.map((currencie) => {
-        return <li><button>{currencie.name}</button></li>
+// Dans List, on veut recuperer :
+//  - le nom de la device cliqué,
+
+
+const List = ({initialCurrencies, handleClick}) => {
+    
+    const currenciesJSX = initialCurrencies.map((currencie) => {
+        return (
+            <li key={currencie.name}>
+                <button onClick={() => {handleClick(currencie.name)}}>{currencie.name}</button>
+            </li>
+        );
     });
 
     return (
@@ -15,13 +24,14 @@ const List = ({currencies}) => {
 };
 
 // Mise en place de proptypes pour le tableau d'objet.
-List.PropTypes = {
-    currencies: PropTypes.arrayOf(
+List.propTypes = {
+    initialCurrencies: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string.isRequired,
             rate: PropTypes.number.isRequired,
         })
     ).isRequired,
+    handleClick: PropTypes.func.isRequired,
 };
 
 export default List;

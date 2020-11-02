@@ -11,7 +11,7 @@ const List = ({initialCurrencies, handleClick}) => {
     const currenciesJSX = initialCurrencies.map((currencie) => {
         return (
             <li key={currencie.name}>
-                <button onClick={() => {handleClick(currencie.name)}}>{currencie.name}</button>
+                <button onClick={() => {handleClick(currencie.name, currencie.rate)}}>{currencie.name}</button>
             </li>
         );
     });

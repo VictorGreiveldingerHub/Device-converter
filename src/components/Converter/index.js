@@ -14,8 +14,9 @@ const Converter = () => {
   const [currencies, setCurrencies] = useState('United States Dollar');
   const [value, setValue] = useState(1.094103);
 
-  const handleClick = (currenciesName) => {
+  const handleClick = (currenciesName, currenciesRate) => {
     setCurrencies(currenciesName);
+    setValue(currenciesRate);
     return currenciesName;
   };
 
@@ -24,7 +25,7 @@ const Converter = () => {
     <div id="todo">
       <Form />
       <List initialCurrencies={initialCurrencies} handleClick={handleClick}/>
-      <Result value={value} currencies={currencies} initialCurrencies={initialCurrencies} />
+      <Result value={value} currencies={currencies} />
     </div>
   );
 };

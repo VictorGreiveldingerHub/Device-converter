@@ -6,10 +6,13 @@ import './styles.scss';
 //  - la valeur de la device cliqué,
 //  - le nom de la device cliqué.
 
-const Result = ( {value, currencies} ) => {
+const Result = ( {value, currencies, inputValue} ) => {
+
+    const multiplier = inputValue * value;
+
     return (
         <div className="result">
-            <span className="value">{value}</span>
+            <span className="value">{multiplier}</span>
             <p className="description">{currencies}</p>
         </div>
     );
@@ -17,6 +20,8 @@ const Result = ( {value, currencies} ) => {
 
 Result.propTypes = {
     value: PropTypes.number.isRequired,
+    currencies: PropTypes.string.isRequired,
+    inputValue: PropTypes.number.isRequired,
 };
 
 export default Result;

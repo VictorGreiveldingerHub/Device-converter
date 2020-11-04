@@ -17,7 +17,7 @@ const Form = ( {value, handleChangeInput}) => {
 
     return (
         <div className="form" onSubmit={handleSubmit}>
-            <h1>Converter</h1>
+            <h1>Convertisseur (en €)</h1>
             <form id="todo-form">
                 <input
                     type="text"

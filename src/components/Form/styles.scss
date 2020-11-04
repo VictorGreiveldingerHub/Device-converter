@@ -9,5 +9,15 @@
         margin: 1em;
         font-size: 28px;
         font-weight: 900;
+    };
+
+    & input {
+        border: none;
+        height: 2em;
+        padding: 1em;
+    }
+
+    & span {
+        margin-left: 2em;
     }
 }

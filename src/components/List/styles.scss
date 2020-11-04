@@ -9,7 +9,7 @@
             border: none;
             width: -webkit-fill-available;
             height: 50px;
-            border-bottom: solid 1px rgb(236, 234, 234);
+            border-bottom: solid 1px rgb(207, 204, 204);
             color: rgb(202, 123, 50);
             font-size: 20px;
             text-align: left;
@@ -17,7 +17,8 @@
 
         & button:hover {
             background-color: rgba(202, 123, 50, 0.219);
-            font-size: 1,5em;
+            font-size: 1.25em;
+            font-weight: bold;
         }
     }
 }

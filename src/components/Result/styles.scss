@@ -4,6 +4,7 @@
     height: 125px;
     padding: 2em;
     text-align: center;
+    border-top: 1px solid rgb(207, 204, 204);
 
     & .value {
         font-size: 30px;
@@ -12,5 +13,7 @@
 
     & .description {
         font-size: 23px;
+        font-weight: bold;
+        margin-top: 1em;
     }
 }

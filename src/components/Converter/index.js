@@ -1,20 +1,24 @@
 // == Import npm
 import React, {useState} from 'react';
+import { Container } from 'semantic-ui-react';
 
 // == Import
 import Form from 'src/components/Form';
 import List from 'src/components/List';
 import Result from 'src/components/Result';
-import './styles.scss';
 import initialCurrencies from 'src/data/currencies';
 
-
+import './styles.scss';
+import 'semantic-ui-css/semantic.min.css';
 
 const Converter = () => {
+  const ROUNDED = 100;
+
   const [currencies, setCurrencies] = useState('United States Dollar');
-  const [value, setValue] = useState(1.094103);
+  const [value, setValue] = useState(Math.round(1.094103 * ROUNDED) / ROUNDED);
   const [inputValue, setInputValue] = useState(1);
 
+  
   const handleClick = (currenciesName, currenciesRate) => {
     setCurrencies(currenciesName);
     setValue(currenciesRate);
@@ -26,7 +30,10 @@ const Converter = () => {
   };
 
   return (
-    <div id="todo">
+    <Container 
+      id="todo"
+      fluid
+    >
       <Form 
         value={inputValue} 
         handleChangeInput={handleChangeInput}
@@ -40,7 +47,7 @@ const Converter = () => {
         currencies={currencies}
         inputValue={inputValue}
       />
-    </div>
+    </Container>
   );
 };
 

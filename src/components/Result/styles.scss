@@ -11,9 +11,8 @@
         font-weight: 600;
     }
 
-    & .description {
-        font-size: 23px;
-        font-weight: bold;
-        margin-top: 1em;
+    .ui.block.header {
+        margin-top: 0.5em;
+        color: rgb(202, 123, 50);
     }
 }

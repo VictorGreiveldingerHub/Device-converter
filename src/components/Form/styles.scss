@@ -1,23 +1,16 @@
 .form {
     background-color: rgb(202, 123, 50);
-    color: #fff;
     height: 125px;
     text-align: center;
     padding-top: 5px;
-
-    & h1 {
-        margin: 1em;
-        font-size: 28px;
-        font-weight: 900;
-    };
-
-    & input {
-        border: none;
-        height: 2em;
-        padding: 1em;
-    }
-
-    & span {
-        margin-left: 2em;
-    }
 }
+
+.ui.header:first-child {
+    color: #fff;
+};
+
+#todo-form {
+    height: min-content;
+    width: fit-content;
+    margin-left: 5em;
+};

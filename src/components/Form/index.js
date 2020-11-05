@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Header, Input, Form as Formulaire } from 'semantic-ui-react'
+
+import 'semantic-ui-css/semantic.min.css';
 import './styles.scss';
 
 /* Prendre en compte le formulaire de l(utilisateur )
@@ -17,18 +20,18 @@ const Form = ( {value, handleChangeInput}) => {
 
     return (
         <div className="form" onSubmit={handleSubmit}>
-            <h1>Convertisseur (en €)</h1>
-            <form id="todo-form">
-                <input
+            <Header as="h1">Convertisseur</Header>
+            <Formulaire id="todo-form">
+                <Input
                     type="text"
-                    id="todo-input"
+                    label={{ basic: true, content: '€' }}
+                    labelPosition='right'
                     placeholder="Valeur initiale"
                     autoComplete="off"
                     onChange={(e) => {handleChangeInput(e.target.value)}}
                     value={value}
                 />
-                <span>€</span>
-            </form>
+            </Formulaire>
         </div>
     );
 };

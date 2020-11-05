@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Header } from 'semantic-ui-react'
+
+import 'semantic-ui-css/semantic.min.css';
 import './styles.scss';
 
 // Dans Result on veut récuperer :
@@ -13,7 +16,7 @@ const Result = ( {value, currencies, inputValue} ) => {
     return (
         <div className="result">
             <span className="value">{multiplier}</span>
-            <p className="description">{currencies}</p>
+            <Header as='h3' block>{currencies}</Header>
         </div>
     );
 };
